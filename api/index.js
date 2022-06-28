@@ -2,9 +2,11 @@ import express from "express";
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import authRoute from "./routes/auth.js"
-import usersRoute from "./routes/auth.js"
-import roomsRoute from "./routes/auth.js"
+import usersRoute from "./routes/users.js"
+import roomsRoute from "./routes/rooms.js"
 import hotelRoute from "./routes/hotels.js"
+import cookieParser from 'cookie-parser';
+
 
 
 dotenv.config();
@@ -30,6 +32,8 @@ mongoose.connection.on("disconnected", ()=> {
 
 
 //middleares
+app.use(cookieParser())
+
 app.use(express.json());
 
 
