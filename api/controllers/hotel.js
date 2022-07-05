@@ -1,4 +1,4 @@
-import Hotel from "../models/Hotel.js"
+import Hotel from "../models/hotelDetails.js"
 
 
 export const createHotel = async (req, res, next)=> {
